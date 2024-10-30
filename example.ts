@@ -11,7 +11,7 @@ export const evaluate = (props: EvaluateProps) => {
   return methods[method](a, b);
 };
 
-console.log(evaluate({ a: 4, b: 2, method: '+' }));
+console.log(evaluate({ a: 4, b: 2, method: '**' }));
 console.log(evaluate({ a: 4, b: 2, method: '*' }));
 console.log(evaluate({ a: 4, b: 2, method: '/' }));
 
