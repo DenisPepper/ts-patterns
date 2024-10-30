@@ -1,19 +1,19 @@
-import { operators, type Operator } from './derive-types.ts';
+import { methods, type Method } from './derive-types.ts';
 
 type EvaluateProps = {
   a?: number;
   b?: number;
-  operator?: Operator;
+  method?: Method;
 };
 
 export const evaluate = (props: EvaluateProps) => {
-  const { a = 1, b = 1, operator = '+' } = props;
-  return operators[operator](a, b);
+  const { a = 1, b = 1, method = '+' } = props;
+  return methods[method](a, b);
 };
 
-console.log(evaluate({ a: 4, b: 2 }));
-console.log(evaluate({ a: 4, b: 2, operator: '*' }));
-console.log(evaluate({ a: 4, b: 2, operator: '/' }));
+console.log(evaluate({ a: 4, b: 2, method: '+' }));
+console.log(evaluate({ a: 4, b: 2, method: '*' }));
+console.log(evaluate({ a: 4, b: 2, method: '/' }));
 
 // ts-node .\example.ts
 // or use cod-runner

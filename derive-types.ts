@@ -2,11 +2,14 @@
 // type User = typeof user;
 // type UserKeys = keyof User;
 
-export const operators = {
-  '+': (a: number, b: number) => a + b,
-  '-': (a: number, b: number) => a - b,
-  '*': (a: number, b: number) => a * b,
-  '/': (a: number, b: number) => a / b,
+type Handler = (a: number, b: number) => number;
+type Operator = '+' | '-' | '*' | '/';
+
+export const methods: Record<Operator, Handler> = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+  '/': (a, b) => a / b,
 };
 
-export type Operator = keyof typeof operators;
+export type Method = keyof typeof methods;
