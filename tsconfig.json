@@ -1,0 +1,10 @@
+{
+  "files": ["./example.ts"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+
+    "noEmit": true, // включит модули ESM
+    "allowImportingTsExtensions": true // включит модули ESM
+  }
+}
